@@ -7,6 +7,9 @@ const TodoList = ({
     CompletedTodos,
     setCompletedTodos,
   }) => {
+
+    console.log(todos);
+
     return (
       <div className="container">
         <Droppable droppableId="TodosList">
@@ -22,7 +25,7 @@ const TodoList = ({
                   index={index}
                   todos={todos}
                   todo={todo}
-                  key={todo.id}
+                  key={index}
                   setTodos={setTodos}
                 />
               ))}
@@ -45,7 +48,7 @@ const TodoList = ({
                   index={index}
                   todos={CompletedTodos}
                   todo={todo}
-                  key={todo.id}
+                  key={index}
                   setTodos={setCompletedTodos}
                 />
               ))}
